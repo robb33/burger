@@ -12,7 +12,7 @@ var connection = mysql.createConnection({
 
   // Your password
   password: "",
-  database: "name_db"
+  database: "burger_db"
 });
 
 //this is the nameontroller.js file

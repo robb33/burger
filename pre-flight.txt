@@ -7,7 +7,7 @@ mkdir burger burger/config burger/controllers burger/db burger/models burger/pub
 2: create files copy & paste run in terminal
 
 touch server.js config/connection.js config/orm.js controllers/applicationController.js controllers/nameController.js db/schema.sql db/seeds.sql models/name.js public/test.html public/assets/css/style.css public/assets/img/test.pgn public/assets/js/test.js views/index.handlebars views/layouts/main.handlebars
-
+if
 
 3:	create package.json
 
@@ -15,13 +15,21 @@ touch server.js config/connection.js config/orm.js controllers/applicationContro
 
 5:	install dependencies
 
-	npm i -S body-parser express express-handlebars method-override mysql
+	npm i -S body-parser express express-handlebars method-override cookie-parser mysql
 
 6: cat package.json
 
 7: run schema.sql
 
 8: check database
+	error ERROR 1364 (HY000): Field 'devoured' doesn't have a default value
+	change to devoured tinyint(1), this worked with inserting seed files
 
 
-#: fill in the spaces
+
+9: test node.js
+
+10: test handlebars some of routes
+
+
+#: edit & fill in the spaces
