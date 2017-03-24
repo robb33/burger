@@ -1,0 +1,27 @@
+Zero hour nine AM:
+
+1: create directories - copy & paste run in terminal
+
+mkdir burger burger/config burger/controllers burger/db burger/models burger/public burger/public/assets burger/public/assets/css burger/public/assets/img burger/public/assets/js burger/views burger/views/layouts
+
+2: create files copy & paste run in terminal
+
+touch server.js config/connection.js config/orm.js controllers/applicationController.js controllers/nameController.js db/schema.sql db/seeds.sql models/name.js public/test.html public/assets/css/style.css public/assets/img/test.pgn public/assets/js/test.js views/index.handlebars views/layouts/main.handlebars
+
+
+3:	create package.json
+
+4:	npm init
+
+5:	install dependencies
+
+	npm i -S body-parser express express-handlebars method-override mysql
+
+6: cat package.json
+
+7: run schema.sql
+
+8: check database
+
+
+#: fill in the spaces
