@@ -28,7 +28,7 @@ app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them. creating the routes....this is about organization
 var applicationController = require("./controllers/applicationController.js");
-var nameController = require("./controllers/nameController.js");
+// var nameController = require("./controllers/nameController.js");
 
 app.use("/", applicationController);
 
