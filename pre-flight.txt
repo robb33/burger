@@ -30,5 +30,11 @@ touch server.js config/connection.js config/orm.js controllers/applicationContro
 
 10: test handlebars some of routes
 
+11: heroku connect
+
+
+mysql -h xxxxxxxx -uxxxxxxxx -pxxxxxxxx
+
+
 
 #: edit & fill in the spaces

@@ -3,17 +3,13 @@ var express = require('express');
 var router  = express.Router();
 var mysql = require('mysql')
 
-var connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-
-  // Your username
-  user: "root",
-
-  // Your password
-  password: "",
-  database: "burger_db"
-});
+// var connection = mysql.createConnection({
+//   host: "localhost",
+//   port: 3306,
+//   user: "root",
+//   password: "",
+//   database: "burger_db"
+// });
 
 //this is the nameontroller.js file
 
