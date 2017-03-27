@@ -32,9 +32,23 @@ touch server.js config/connection.js config/orm.js controllers/applicationContro
 
 11: heroku connect
 
-
 mysql -h xxxxxxxx -uxxxxxxxx -pxxxxxxxx
 
 
+12: create burger.js and tested
+
+13: layout main & index handlebars
+
+14: added form and css
+
 
 #: edit & fill in the spaces
+
+
+
+
+
+
+
+
+

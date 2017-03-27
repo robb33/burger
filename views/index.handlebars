@@ -1,3 +1,40 @@
 <!-- this is {{{ body }}} -->
 
-<h1>Eat-Da-Burger!</h1>
+
+
+			
+				<div>
+				<p>Handlebars Body Test</p>
+				<form>
+					<input type="text" name="name" placeholder="clean this up">
+				</form>
+				<img src="/assets/img/burger03.png">
+				<p>Type in the name of the Burger you want to eat, then click Submit</p>
+				</div>
+			
+
+
+<div>
+		{{#each burgers}}
+			{{#unless this.devoured}}
+			{{this.burger_name}}
+
+				
+
+
+
+			{{/unless}}
+		{{/each}}
+
+</div>
+<div>
+
+		{{#each burgers}}
+			{{#if this.devoured}}
+			{{this.burger_name}}
+
+			{{/if}}
+		{{/each}}
+</div>
+
+
