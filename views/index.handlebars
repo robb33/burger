@@ -1,40 +1,45 @@
-<!-- this is {{{ body }}} -->
 
+<h1 class="text-center"> Eat-da-burger </h1>
+<br>
 
-
-			
-				<div>
-				<p>Handlebars Body Test</p>
-				<form>
-					<input type="text" name="name" placeholder="clean this up">
-				</form>
-				<img src="/assets/img/burger03.png">
-				<p>Type in the name of the Burger you want to eat, then click Submit</p>
-				</div>
-			
-
-
-<div>
-		{{#each burgers}}
-			{{#unless this.devoured}}
-			{{this.burger_name}}
-
-				
-
-
-
-			{{/unless}}
-		{{/each}}
-
-</div>
-<div>
-
-		{{#each burgers}}
-			{{#if this.devoured}}
-			{{this.burger_name}}
-
-			{{/if}}
-		{{/each}}
+<!-------New Burger Form------->
+<div class="col-md-4 col-md-offset-4"
+  <h2 class="section-header">Add a Burger</h2>
+  <form action="/" method="POST" class="new-burger">
+    <div class="form-group">
+      <input placeholder="type text here" class="form-control burger-name" rows="1" name="burger_name"></input>
+      <br>
+      <button type="submit" class="btn btn-lg btn-primary submit burger-submit">Submit</button>
+    </div>
+  </form>
 </div>
 
 
+<!------Burger list------>
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 burger-list">
+  <h2 class="section-header">Available Burgers</h2>
+  <ul class="list-group">
+    {{#each burgers}} {{#unless this.devoured}}
+    <li class="list-group-item">
+      {{this.burger_name}}
+
+      <form action="/{{this.id}}?_method=PUT" method="POST" class="form-inline">
+        <input type="hidden" name="id" value="{{this.id}}">
+        <button type="submit" class="btn btn-sm btn-success">DEVOUR IT!</button>
+        </form>
+    </li>
+    {{/unless}} {{/each}}
+  </ul>
+</div>
+
+<!------ Eaten Burger list------>
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 eaten-list">
+  <h2 class="section-header">Devoured!!!!</h2>
+  {{!-- <ul class="list-group"> --}}
+    {{#each burgers}} {{#if this.devoured}}
+    <li>
+      {{this.burger_name}}
+    </li>
+    {{/if}} {{/each}}
+ {{!--  </ul> --}}
+</div>

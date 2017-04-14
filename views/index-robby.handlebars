@@ -1,0 +1,47 @@
+<!-- this is {{{ body }}} -->
+
+
+
+{{!-- New Burger --}}		
+	<div>		
+		<p>Place your Order</p>
+			<form action="/" method="POST" class="new-burger">
+
+				<input placeholder="type your oder here" name="burger_name"></input>
+			
+				<button type="submit" class="btn btn-lg btn-primary submit burger-submit">Submit</button>
+
+			</form>
+				<img src="/assets/img/burger03.png">
+			<p>Type in the whole name of the Burger you want to eat, then click Submit</p>
+	</div>
+		
+
+{{!-- Burger List --}}
+<div>
+		{{#each burgers}} {{#unless this.devoured}}
+
+		<li>
+				{{this.burger_name}}
+			<form action="/{{this.id}}?_method=PUT" method="POST" class="form-inline">
+		    	<input type="hidden" name="id" value="{{this.id}}">
+		    	<button type="submit">devour it button!</button>
+		  	</form>
+		</li>
+
+				{{/unless}} {{/each}}
+
+</div>
+
+{{!-- Burger Devoured --}}
+<div>
+
+		{{#each burgers}} {{#if this.devoured}}
+
+			<li class="list-group-item">
+			{{this.burger_name}}
+			</li>
+			{{/if}} {{/each}}
+</div>
+
+

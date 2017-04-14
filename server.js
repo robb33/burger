@@ -1,10 +1,11 @@
-var express = require("express");
-var bodyParser = require("body-parser");
-var methodOverride = require("method-override");
+var express = require('express');
+var methodOverride = require('method-override');
+var bodyParser = require('body-parser');
+var exphbs = require('express-handlebars');
 
 // var port = 3000;
 
-var app = express();
+var app = module.exports = express();
 var cookieParser = require('cookie-parser');
 
 var session = require('express-session');
@@ -28,7 +29,7 @@ app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them. creating the routes....this is about organization
 
-var burgerController = require("./controllers/burgerController.js");
+var burgerController = require('./controllers/burgerController');
 
 
 
