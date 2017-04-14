@@ -32,7 +32,7 @@ router.post("/", function(req, res) {
 
 router.put("/:id", function(req, res){
   var objColVals = {devoured: 1}
-  var condition = {id: req.params.id}
+  var condition = "id = "+ req.params.id  //turn id in string
   burger.update(objColVals, condition, function(response){
     res.redirect('/');
   });
